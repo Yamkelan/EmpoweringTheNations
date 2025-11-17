@@ -1,0 +1,137 @@
+/* ========================================
+   ABOUT.CSS - About Page Styles
+   Based on global theme from styles.css
+   ======================================== */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Georgia', serif;
+  color: #000;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+/* Navigation (reuse main site nav style) */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  background-color: white;
+  border-bottom: 2px solid #eee;
+  padding: 15px 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #024b46;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: #f6d66a;
+}
+
+/* Header Section */
+.header {
+  text-align: center;
+  background: #f6fff8;
+  padding: 2rem 1rem;
+  border-bottom: 2px solid #036b64;
+}
+
+.header .brand {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #036b64;
+}
+
+.header .tag {
+  color: #b39b00;
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+/* Section Wrappers */
+section {
+  padding: 3rem 1rem;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Section Backgrounds */
+#mission-section {
+  background: #ffffff;
+}
+
+#core-values {
+  background: #e6fff0; /* soft mint green */
+}
+
+#history-section {
+  background: #f0fff5; /* very light green */
+}
+
+#services-list {
+  background: #f6fff8;
+}
+
+/* Headings */
+h2 {
+  font-size: 2rem;
+  color: #024b46;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1.2rem;
+}
+
+/* Lists */
+ul, ol {
+  list-style: inside;
+  margin: 1.5rem auto;
+  max-width: 800px;
+  font-size: 1.1rem;
+  color: #024b46;
+  text-align: left;
+  line-height: 1.8;
+}
+
+/* Definition List */
+dt {
+  font-weight: bold;
+  color: #036b64;
+  margin-top: 1rem;
+}
+
+dd {
+  color: #444;
+  margin: 0.5rem auto 1.5rem;
+  max-width: 700px;
+  text-align: center;
+  font-size: 1.05rem;
+}
+
+/* Footer */
+footer {
+  background-color: #0b5345;
+  color: #f1c40f;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
