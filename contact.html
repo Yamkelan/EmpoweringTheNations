@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Contact Us | Empowering The Nation</title>
+
+  <!-- Global + Page-specific CSS -->
+  <link rel="stylesheet" href="CSS/styles.css" />
+  <link rel="stylesheet" href="CSS/contact.css" />
+
+  <style>
+    /* 🩵 Quick Fix: make sure nothing covers the form */
+    #contact-section, form, textarea, input {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Optional: make textarea easier to type in */
+    textarea {
+      resize: vertical;
+      min-height: 140px;
+      background-color: #fff;
+    }
+
+    /* Fix for header image overlapping form on some browsers */
+    header img {
+      display: block;
+      max-height: 200px;
+      width: auto;
+      object-fit: contain;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <img src="images/Logo.jpg" alt="Empowering The Nation Logo" class="logo">
+    <div>
+      <div class="brand">Empowering The Nation</div>
+      <div class="tag small">Contact Us</div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="courses.html">Courses</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+
+    <!-- Contact Section -->
+    <section id="contact-section">
+      <h2>Get in Touch</h2>
+      <p>We look forward to hearing from you. Kindly fill in the form below and we’ll respond shortly.</p>
+
+      <form id="contact-form">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Type your message here" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <!-- Confirmation message -->
+      <div id="confirmation-message" style="margin-top: 15px; font-weight: bold; color: #004b2e;"></div>
+    </section>
+
+    <!-- Company Info Section -->
+    <section id="company-info">
+      <h2>Our Details</h2>
+      <p><strong>Phone:</strong> 033 897 4567</p>
+      <p><strong>Email:</strong> <a href="mailto:empoweringtn@connect.co.za">empoweringtn@connect.co.za</a></p>
+      <p><strong>Venues:</strong><br>
+         Soweto Training Centre | Alexander Community Centre | Sandton Skye</p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="main-footer">
+    <p>&copy; 2025 Empowering The Nation. All Rights Reserved</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Handle contact form submission
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      // Display confirmation message
+      const confirmation = document.getElementById("confirmation-message");
+      confirmation.textContent = "✅ Thank you! Your message has been received. We’ll get back to you soon.";
+
+      // Optionally clear the form
+      this.reset();
+    });
+  </script>
+</body>
+</html>
