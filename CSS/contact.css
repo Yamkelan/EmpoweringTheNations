@@ -1,0 +1,165 @@
+/* ========================================
+   CONTACT.CSS - Contact Page Specific Styles
+   Adapted to Empowering The Nation website
+   ======================================== */
+
+/* General Page Setup */
+#contact-section {
+    background: #ffffff;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+#contact-section h2 {
+    color: #004b2e; /* dark green */
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+}
+
+#contact-section p {
+    margin-bottom: 2rem;
+    color: #333;
+    font-size: 1rem;
+}
+
+/* Contact Form Styles */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #f7fff6; /* light green tone */
+    border-radius: 8px;
+    border: 1px solid #e2e2e2;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+label {
+    display: block;
+    text-align: left;
+    font-size: 1.1rem;
+    color: #004b2e;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 1.2rem;
+    font-family: 'Segoe UI', sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #b39b00; /* gold accent */
+    box-shadow: 0 0 6px rgba(179, 155, 0, 0.3);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    background-color: #004b2e; /* dark green */
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 1.5rem auto 0;
+    display: block;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background: #b39b00; /* gold hover */
+    color: #fff;
+}
+
+button[type="submit"]:active {
+    transform: scale(0.97);
+}
+
+/* Company Info Section */
+#company-info {
+    background: #f2f8f2;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+#company-info h2 {
+    color: #004b2e;
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+}
+
+#company-info p {
+    font-size: 1.1rem;
+    margin-top: 0.6rem;
+    color: #333;
+}
+
+/* Links in Contact Info */
+#company-info a {
+    color: #b39b00;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#company-info a:hover {
+    color: #004b2e;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablet: Max-width 1023px */
+@media (max-width: 1023px) {
+    form {
+        padding: 1.5rem;
+        margin: 0 1rem;
+    }
+
+    label {
+        text-align: left;
+    }
+
+    input,
+    textarea {
+        padding: 0.7rem;
+        margin-bottom: 1rem;
+    }
+
+    button[type="submit"] {
+        padding: 0.7rem 1.8rem;
+        font-size: 1rem;
+    }
+}
+
+/* Mobile: Max-width 768px */
+@media (max-width: 768px) {
+    form {
+        padding: 1rem;
+    }
+
+    #company-info {
+        padding: 1.5rem 0.5rem;
+    }
+}

@@ -1,0 +1,170 @@
+/* =============================
+   RESET
+   ============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =============================
+   BODY
+   ============================= */
+body {
+  font-family: 'Georgia', serif;
+  color: #222;
+  background-color: #f9fff9; /* very light green */
+  line-height: 1.6;
+}
+
+/* =============================
+   NAVBAR
+   ============================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  background-color: #ffffff;
+  border-bottom: 3px solid #b39b00; /* gold underline */
+}
+
+.logo {
+  width: 70px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #004b2e;
+  font-size: 18px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #b39b00; /* gold hover */
+}
+
+/* =============================
+   HERO SECTION
+   ============================= */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 100px;
+  flex-wrap: wrap;
+  background: linear-gradient(to right, #f9fff9, #ffffff);
+}
+
+.hero-text {
+  max-width: 550px;
+}
+
+.hero-text h1 {
+  font-size: 60px;
+  font-weight: 700;
+  color: #004b2e; /* dark green */
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.hero-text h3 {
+  color: #004b2e;
+  margin-bottom: 10px;
+}
+
+/* =============================
+   BUTTONS
+   ============================= */
+.btn {
+  display: inline-block;
+  background-color: #004b2e;
+  color: #fff;
+  font-weight: bold;
+  padding: 12px 35px;
+  border: 3px solid #b39b00;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: #ff0000; /* red accent */
+}
+
+
+/* =============================
+   LOGIN FORM
+   ============================= */
+form input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #b39b00;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+form input:focus {
+  outline: none;
+  border-color: #004b2e;
+  box-shadow: 0 0 6px rgba(0, 75, 46, 0.3);
+}
+
+/* =============================
+   HERO IMAGE
+   ============================= */
+.hero-image img {
+  width: 300px;
+  height: auto;
+  border-radius: 12px;
+  border: 3px solid #b39b00;
+}
+
+/* =============================
+   FOOTER
+   ============================= */
+footer {
+  background-color: #004b2e;
+  color: #f9fff9;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+  font-size: 16px;
+  border-top: 3px solid #b39b00;
+}
+
+/* =============================
+   RESPONSIVE DESIGN
+   ============================= */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+  }
+
+  .hero-image img {
+    margin-top: 40px;
+    width: 220px;
+  }
+}
