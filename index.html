@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empowering The Nation - Home</title>
+
+  <!--CSS File Links -->
+  <link rel="stylesheet" href="CSS/index.css">
+  <link rel="stylesheet" href="CSS/styles.css">
+  <link rel="stylesheet" href="CSS/global.css">
+
+  <style>
+    /* Optional extra styling for message box */
+    #login-message {
+      margin-top: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+    #login-message.error { color: red; }
+    #login-message.success { color: green; }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <img src="images/Logo.jpg" alt="Empowering The Nation Logo" class="logo">
+    <div class="brand">Empowering The Nation</div>
+    <div class="tag small">We Serve Beyond The Call Of Duty</div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="courses.html">Courses</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Welcome To Empowering The Nation</h1>
+      <p>Upskilling communities through practical, affordable training programmes that build confidence, knowledge, and independence.</p>
+      <p>
+        Empowering The Nation is dedicated to providing high-quality skills training for individuals seeking
+        personal and professional growth. We specialize in life skills, childminding, cooking, first aid,
+        sewing, and gardening courses.
+      </p>
+
+      <!-- Login / Sign Up Form -->
+      <h3>Login / Sign Up</h3>
+      <form id="login-form">
+        <input type="text" id="name" placeholder="Enter your name" required><br><br>
+        <input type="email" id="email" placeholder="Enter your email" required><br><br>
+        <button type="submit" class="btn">Login / Sign Up</button>
+        <div id="login-message"></div>
+      </form>
+
+      <!-- Buttons to navigate after login -->
+      <div id="nav-buttons" style="margin-top: 25px; display: none;">
+        <a href="about.html" class="btn">About Us</a>
+        <a href="courses.html" class="btn">Our Courses</a>
+        <a href="contact.html" class="btn">Contact Us</a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="images/Logo.jpg" alt="Training Illustration">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Empowering The Nation | All Rights Reserved
+  </footer>
+<script>
+  const form = document.getElementById("login-form");
+  const messageBox = document.getElementById("login-message");
+  const navButtons = document.getElementById("nav-buttons");
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+
+    // Reset message
+    messageBox.textContent = "";
+    messageBox.className = "";
+
+    // Validate required fields
+    if (name === "" || email === "") {
+      messageBox.textContent = "Please fill in all fields.";
+      messageBox.classList.add("error");
+      return;
+    }
+
+    // ✅ Relaxed email validation (accepts all normal email formats)
+    const emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+    if (!emailPattern.test(email)) {
+      messageBox.textContent = "⚠️ Please enter a valid email address.";
+      messageBox.classList.add("error");
+      return;
+    }
+
+    // ✅ If everything is valid, show success and redirect
+    messageBox.textContent = "✅ Welcome, " + name + "! Redirecting to About page...";
+    messageBox.classList.add("success");
+
+    setTimeout(() => {
+      window.location.href = "about.html";
+    }, 1000);
+  });
+</script>
+
+</body>
+</html>
